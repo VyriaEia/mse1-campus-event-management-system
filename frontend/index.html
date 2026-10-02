@@ -1,23 +1,119 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>Campus Event Management System</h1>
+        <p>Discover, explore, and register for campus events.</p>
     </header>
 
     <main>
-        <section aria-label="Campus events">
-            <h2>Upcoming Events</h2>
+        <section aria-labelledby="events-heading">
+            <h2 id="events-heading">Upcoming Campus Events</h2>
+
+            <div class="event-grid">
+
+                <article class="event-card">
+                    <h3>Technology Seminar 2026</h3>
+                    <p>Date: October 15, 2026</p>
+                    <p>Location: University Auditorium</p>
+                    <p>Explore emerging technologies and IT innovations.</p>
+                    <button type="button"
+                            class="register-btn"
+                            data-event="Technology Seminar 2026">
+                        Register
+                    </button>
+                </article>
+
+                <article class="event-card">
+                    <h3>Campus Sports Festival</h3>
+                    <p>Date: October 20, 2026</p>
+                    <p>Location: University Gymnasium</p>
+                    <p>Join exciting sports activities and competitions.</p>
+                    <button type="button"
+                            class="register-btn"
+                            data-event="Campus Sports Festival">
+                        Register
+                    </button>
+                </article>
+
+                <article class="event-card">
+                    <h3>Career Development Workshop</h3>
+                    <p>Date: October 25, 2026</p>
+                    <p>Location: Conference Hall</p>
+                    <p>Develop professional skills and career readiness.</p>
+                    <button type="button"
+                            class="register-btn"
+                            data-event="Career Development Workshop">
+                        Register
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="registration"
+                 aria-labelledby="registration-heading">
+            <h2 id="registration-heading">Event Registration</h2>
+            <p>Complete the form to register for an event.</p>
+
+            <form id="registration-form">
+
+                <label for="student-name">Full Name</label>
+                <input type="text"
+                       id="student-name"
+                       name="studentName"
+                       aria-label="Student full name"
+                       autocomplete="name"
+                       required>
+
+                <label for="student-email">Student Email</label>
+                <input type="email"
+                       id="student-email"
+                       name="studentEmail"
+                       aria-label="Student email address"
+                       autocomplete="email"
+                       required>
+
+                <label for="event-select">Select Event</label>
+                <select id="event-select"
+                        name="event"
+                        aria-label="Select campus event"
+                        required>
+                    <option value="">Choose an event</option>
+                    <option value="Technology Seminar 2026">
+                        Technology Seminar 2026
+                    </option>
+                    <option value="Campus Sports Festival">
+                        Campus Sports Festival
+                    </option>
+                    <option value="Career Development Workshop">
+                        Career Development Workshop
+                    </option>
+                </select>
+
+                <button type="submit">
+                    Submit Registration
+                </button>
+
+                <p id="form-message"
+                   role="status"
+                   aria-live="polite"></p>
+
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>Campus Event Management System</p>
+        <p>&copy; 2026 Campus Event Management System</p>
     </footer>
 </body>
 </html>

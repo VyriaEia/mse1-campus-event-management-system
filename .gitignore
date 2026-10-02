@@ -1,0 +1,15 @@
+
+# Visual Studio temporary files
+.vs/
+
+# Build outputs
+bin/
+obj/
+
+# User-specific settings
+*.user
+*.suo
+
+# Operating system files
+Thumbs.db
+.DS_Store
